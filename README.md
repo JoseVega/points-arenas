@@ -23,22 +23,31 @@ The settings are simple, you can change the properties in the object:
     
 You shouldn't modify the code in the class, instead you should overwrite those properties on runtime. Example:
 
-VG_Points_Obj()->table_name = 'user_credit';
+
+    VG_Points_Obj()->table_name = 'user_credit';
 
 # Usage
 
 This class is very easy to use. You just need to call the methods when the right action occurs. For example:
 
-VG_Points_Obj()->add_victory($user_id);
 
-VG_Points_Obj()->add_loss($user_id);
+    VG_Points_Obj()->add_victory($user_id);
+
+
+    VG_Points_Obj()->add_loss($user_id);
 
 If you want to give points regardless of the event
 
-VG_Points_Obj()->add_points_to_user($user_id, $points = 1, $type = 'in', $source = 'general');
+
+    VG_Points_Obj()->add_points_to_user($user_id, $points = 1, $type = 'in', $source = 'general');
 
 If you want to remove points regardless of the event
 
-VG_Points_Obj()->add_points_to_user($user_id, $points = 1, $type = 'out', $source = 'loss');
+
+    VG_Points_Obj()->add_points_to_user($user_id, $points = 1, $type = 'out', $source = 'loss');
 
 The user will automatically move to the next level/arena if he reaches the current arena limits set in the settings page in wp-admin.
+
+# Need help?
+
+Do you need help using/integrating this class? You can find my email in my github profile and get in touch.
